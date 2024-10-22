@@ -6,55 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        html {
-            display: flex;
-            justify-content: center;
-        }
 
-        body {
-            width: 8.5in;
-            padding: 2em;
-        }
-
-        body>div:first-child {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            >img {
-                width: 200px;
-                height: 200px;
-            }
-        }
-
-        hr {
-            height: 0.25em;
-            background-color: black;
-        }
-
-        p>strong {
-            text-decoration: underline;
-        }
-
-        table {
-            width: 100%;
-
-            td {
-                padding: 0.5em;
-                vertical-align: top;
-            }
-        }
-
-        li {
-            padding: 0.5em;
-        }
-
-        h3 {
-            margin-top: 5em;
-            margin-right: 3em;
-            text-align: end;
-            text-decoration: underline;
-        }
     </style>
 </head>
 
