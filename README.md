@@ -1,3 +1,122 @@
+1. INSTALL PHP
+	- C:/php - create folder
+	- extract 
+	- add to environment variables 
+		- new / browse / ok
+	- check terminal 'php -v'
+2. INSTALL COMPOSER
+	- - check terminal 'composer -V'/////////
+3. INSTALL XAMPP
+4. INSTALL LARAVEL
+	- 'composer global require laravel/installer'
+
+go to  C:\php\php.ini
+find php.ini
+
+remove semi colons at first for "extension=fileinfo, extension=pdo_mysql and extension=zip"
+
+open folder, open terminal, 'laravel new example-app'
+- press enter 2x
+
+open folder with code
+
+GO TO PROJECT FOLDER
+OPEN WITH CODE
+
+INTERNAL SERVER ERROR -
+OPEN xxampp - run as administrator
+
+start apache
+start MySQL
+
+Unknown database 'example_app' - good to configure Laravel files
+	- go to vscode
+'CTRL + C' to close the server and type 
+'php artisan make:migration create_informations_table'
+or any name you want on 'informations' press ENTER
+app/database/migrations
+
+add your data like name contact email objective.....data in you resume
+
+string for less than 256 characters or letters
+longText for objectives...or paragraphs
+
+'php artisan make:model Information'
+
+app/models
+
+add 
+protected $table = 'informations';
+protected protected $fillable = [
+        'name',
+        'email',
+        'contact',
+        'objective',
+//...you other data
+    ];
+
+save and run 'php artisan migrate' press enter
+
+go to xampp - click MySQL admin
+
+/example myapp - informations table -insert
+
+go to routes/web.php
+code 
+
+   $data = Information::all(); //add records on that table
+    $data = $data[0]; //get the first record
+
+    return view('welcome', ['data' => $data]);
+
+///
+go to resources/views/welcome.blade/php
+-- delete all
+go to GitHub/resume and copy the html code
+
+paste and code
+add this {{$data['name']}} to get the data 
+change 'name' to any data you put on database 
+eg, email, objective, contact .....
+
+make sure to save all your files
+
+php artisan serve
+
+<h1>LARAVEL DONE</h1>
+
+to get .sql
+
+go to xampp -> MySQL -> admin -> example_app -> export -> export button
+
+paste it to your project folder -> example-app
+
+to add to git add GitHub repo
+
+get link 
+
+CTRL C to close server
+-git init
+-git add .
+-git commit -m 'first commit'
+-git remote add origin your_link
+-git push -u origin main
+
+double check for you .sql file in GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
