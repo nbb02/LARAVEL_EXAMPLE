@@ -10,10 +10,19 @@
 4. INSTALL LARAVEL
 	- 'composer global require laravel/installer'
 
-go to  C:\php\php.ini
-find php.ini
+go to C:\php\php.ini find php.ini
 
-remove semi colons at first for "extension=fileinfo, extension=pdo_mysql and extension=zip"
+remove semi colons at first for "extension=fileinfo, extension=pdo_mysql and extension=zip and others" or create php.ini using vscode not with create new text document. 
+
+extension=curl
+extension=fileinfo
+extension=zip
+extension=pdo_mysql
+extension=openssl
+
+or if having erros like failed to listen ...
+use this php.ini and paste to C:/php/ 
+github.com/nbb02/LARAVEL_EXAMPLE/blob/main/php.ini
 
 open folder, open terminal, 'laravel new example-app'
 - press enter 2x
